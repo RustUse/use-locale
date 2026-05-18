@@ -34,4 +34,5 @@ Link any related issue, merge request, pull request, or mirrored discussion.
 
 ## Notes for maintainers
 
-Add anything a maintainer should know when porting or merging this change into the canonical GitHub repository.
+Add anything a maintainer should know when porting or merging this change into
+the canonical GitHub repository.

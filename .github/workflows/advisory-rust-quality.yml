@@ -1,6 +1,6 @@
 name: Advisory Rust Quality
 
-on:
+"on":
     pull_request:
         branches:
             - main

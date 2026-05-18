@@ -1,6 +1,6 @@
 name: Release Publish Automation
 
-on:
+"on":
     push:
         branches:
             - main
@@ -27,7 +27,7 @@ jobs:
         runs-on: ubuntu-latest
         env:
             PUBLISHED_CRATES: >-
-                use-language use-script use-region use-currency-code use-time-zone-id use-locale-tag use-locale-match use-locale
+              use-language use-script use-region use-currency-code use-time-zone-id use-locale-tag use-locale-match use-locale
         steps:
             - name: Check out repository
               uses: actions/checkout@v4
@@ -45,7 +45,7 @@ jobs:
             - name: Confirm published crates already exist on crates.io
               run: |
                   for crate in $PUBLISHED_CRATES; do
-                    curl --fail --silent --show-error "https://crates.io/api/v1/crates/${crate}" > /dev/null
+                      curl --fail --silent --show-error "https://crates.io/api/v1/crates/${crate}" > /dev/null
                   done
 
             - name: Run release-plz release

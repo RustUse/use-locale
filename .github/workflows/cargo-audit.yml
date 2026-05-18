@@ -1,6 +1,6 @@
 name: Cargo Audit
 
-on:
+"on":
     pull_request:
     push:
         branches:

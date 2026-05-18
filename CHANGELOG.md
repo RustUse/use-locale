@@ -2,6 +2,12 @@
 
 ## Unreleased
 
+## [0.1.0](https://github.com/RustUse/use-locale/releases/tag/use-locale-v0.1.0) - 2026-05-18
+
+### Changed
+
+- Add initial use-locale workspace and CI
+
 ### Added
 
 - Added the initial `use-locale` RustUse workspace with a thin facade crate and focused locale identifier primitives.

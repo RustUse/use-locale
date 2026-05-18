@@ -1,0 +1,18 @@
+[package]
+name = "use-script"
+description = "Small writing script subtag primitives for RustUse"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-script"
+keywords = ["script", "locale", "bcp47", "subtag", "rustuse"]
+categories = ["internationalization", "parser-implementations"]
+
+[lints]
+workspace = true

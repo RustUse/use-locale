@@ -1,0 +1,23 @@
+[package]
+name = "use-locale-tag"
+description = "Small BCP 47-style locale tag primitives for RustUse"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-locale-tag"
+keywords = ["locale", "bcp47", "language", "tag", "rustuse"]
+categories = ["internationalization", "parser-implementations"]
+
+[dependencies]
+use-language.workspace = true
+use-region.workspace = true
+use-script.workspace = true
+
+[lints]
+workspace = true

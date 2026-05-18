@@ -1,0 +1,21 @@
+[package]
+name = "use-locale-match"
+description = "Small locale preference and fallback primitives for RustUse"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-locale-match"
+keywords = ["locale", "fallback", "match", "language", "rustuse"]
+categories = ["internationalization", "algorithms"]
+
+[dependencies]
+use-locale-tag.workspace = true
+
+[lints]
+workspace = true

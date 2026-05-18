@@ -1,0 +1,75 @@
+[workspace]
+release = false
+release_always = false
+changelog_update = false
+pr_labels = ["release"]
+max_analyze_commits = 2000
+
+[[package]]
+name = "use-language"
+release = true
+version_group = "rustuse-locale"
+
+[[package]]
+name = "use-script"
+release = true
+version_group = "rustuse-locale"
+
+[[package]]
+name = "use-region"
+release = true
+version_group = "rustuse-locale"
+
+[[package]]
+name = "use-currency-code"
+release = true
+version_group = "rustuse-locale"
+
+[[package]]
+name = "use-time-zone-id"
+release = true
+version_group = "rustuse-locale"
+
+[[package]]
+name = "use-locale-tag"
+release = true
+version_group = "rustuse-locale"
+
+[[package]]
+name = "use-locale-match"
+release = true
+version_group = "rustuse-locale"
+
+[[package]]
+name = "use-locale"
+release = true
+version_group = "rustuse-locale"
+changelog_update = true
+changelog_path = "./CHANGELOG.md"
+changelog_include = [
+  "use-language",
+  "use-script",
+  "use-region",
+  "use-currency-code",
+  "use-time-zone-id",
+  "use-locale-tag",
+  "use-locale-match",
+]
+
+[changelog]
+header = """# Changelog
+
+## Unreleased
+"""
+protect_breaking_commits = true
+sort_commits = "oldest"
+commit_parsers = [
+  { message = "^feat(?:\\([^)]+\\))?!?: .+", group = "Added" },
+  { message = "^fix(?:\\([^)]+\\))?!?: .+", group = "Fixed" },
+  { message = "^security(?:\\([^)]+\\))?!?: .+", group = "Security" },
+  { message = "^(?:refactor|perf|change)(?:\\([^)]+\\))?!?: .+", group = "Changed" },
+  { message = "^docs(?:\\([^)]+\\))?!?: .+", group = "Documentation" },
+  { message = "^(?:build|ci|chore|deps|test)(?:\\([^)]+\\))?!?: .+", group = "Tooling" },
+  { footer = "^changelog: ?ignore$", skip = true },
+  { message = "^.*", group = "Changed" },
+]

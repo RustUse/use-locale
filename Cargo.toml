@@ -1,0 +1,61 @@
+[workspace]
+members = [
+    "crates/use-locale",
+    "crates/use-locale-tag",
+    "crates/use-language",
+    "crates/use-script",
+    "crates/use-region",
+    "crates/use-currency-code",
+    "crates/use-time-zone-id",
+    "crates/use-locale-match",
+]
+resolver = "3"
+
+[workspace.package]
+authors = ["RustUse Contributors"]
+edition = "2024"
+homepage = "https://rustuse.org"
+license = "MIT OR Apache-2.0"
+publish = false
+readme = "README.md"
+repository = "https://github.com/RustUse/use-locale"
+rust-version = "1.95.0"
+version = "0.1.0"
+
+[workspace.dependencies]
+use-currency-code = { version = "0.1.0", path = "crates/use-currency-code" }
+use-language = { version = "0.1.0", path = "crates/use-language" }
+use-locale = { version = "0.1.0", path = "crates/use-locale" }
+use-locale-match = { version = "0.1.0", path = "crates/use-locale-match" }
+use-locale-tag = { version = "0.1.0", path = "crates/use-locale-tag" }
+use-region = { version = "0.1.0", path = "crates/use-region" }
+use-script = { version = "0.1.0", path = "crates/use-script" }
+use-time-zone-id = { version = "0.1.0", path = "crates/use-time-zone-id" }
+
+[workspace.lints.rust]
+unsafe_code = "forbid"
+
+[workspace.lints.clippy]
+all = { level = "warn", priority = -1 }
+cargo = { level = "warn", priority = -1 }
+expect_used = "warn"
+multiple_crate_versions = "allow"
+nursery = { level = "warn", priority = -1 }
+pedantic = { level = "warn", priority = -1 }
+todo = "deny"
+unimplemented = "deny"
+unwrap_used = "warn"
+
+[workspace.metadata.rustuse.release]
+publish = false
+versioning = "lockstep-0.x"
+first-publish-candidates = [
+    "use-language",
+    "use-script",
+    "use-region",
+    "use-currency-code",
+    "use-time-zone-id",
+    "use-locale-tag",
+    "use-locale-match",
+    "use-locale",
+]

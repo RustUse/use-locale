@@ -1,0 +1,30 @@
+[package]
+name = "use-locale"
+description = "Thin facade crate for RustUse locale identifier primitives"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-locale"
+keywords = ["locale", "language", "timezone", "currency", "rustuse"]
+categories = ["internationalization", "parser-implementations"]
+
+[package.metadata.docs.rs]
+all-features = true
+
+[dependencies]
+use-currency-code.workspace = true
+use-language.workspace = true
+use-locale-match.workspace = true
+use-locale-tag.workspace = true
+use-region.workspace = true
+use-script.workspace = true
+use-time-zone-id.workspace = true
+
+[lints]
+workspace = true

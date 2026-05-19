@@ -30,7 +30,7 @@ jobs:
                 use-language use-script use-region use-currency-code use-time-zone-id use-timezone use-locale-tag use-locale-match use-locale
         steps:
             - name: Check out repository
-              uses: actions/checkout@v4
+              uses: actions/checkout@v6
               with:
                   fetch-depth: 0
                   persist-credentials: false

@@ -49,6 +49,7 @@ done
 Wait for crates.io index propagation, then publish dependent focused crates:
 
 ```bash
+cargo publish -p use-timezone
 cargo publish -p use-locale-tag
 cargo publish -p use-locale-match
 ```

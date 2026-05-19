@@ -17,8 +17,10 @@ jobs:
     name: Release Readiness Checks
     runs-on: ubuntu-latest
     env:
-      FOCUSED_CRATES: >-
-        use-language use-script use-region use-currency-code use-time-zone-id use-locale-tag use-locale-match
+      INDEPENDENT_CRATES: >-
+        use-language use-script use-region use-currency-code use-time-zone-id
+      DEFERRED_DEPENDENT_CRATES: >-
+        use-timezone use-locale-tag use-locale-match
     steps:
       - name: Check out repository
         uses: actions/checkout@v4
@@ -36,9 +38,13 @@ jobs:
       - name: Test workspace without default features
         run: cargo test --workspace --no-default-features
 
-      - name: Dry-run publish focused crates
+      - name: Dry-run publish independent focused crates
         run: |
-          for crate in $FOCUSED_CRATES; do
+          for crate in $INDEPENDENT_CRATES; do
             cargo package --list -p "$crate"
             cargo publish --dry-run --allow-dirty -p "$crate"
           done
+
+      - name: Note deferred dependent focused crates
+        run: |
+          printf '%s\n' "Deferred until sibling dependencies are live on crates.io: $DEFERRED_DEPENDENT_CRATES"

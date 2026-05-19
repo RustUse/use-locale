@@ -12,3 +12,7 @@ pub use use_locale_tag::{
 pub use use_region::{RegionCode, is_region_code, normalize_region_code, parse_region_code};
 pub use use_script::{ScriptCode, is_script_code, normalize_script_code, parse_script_code};
 pub use use_time_zone_id::{TimeZoneId, is_time_zone_id, parse_time_zone_id, split_time_zone_id};
+pub use use_timezone::{
+    TimeZone, TimeZoneOffset, TimeZoneParseError, is_time_zone, is_time_zone_offset,
+    parse_time_zone, parse_time_zone_offset, try_parse_time_zone, try_parse_time_zone_offset,
+};

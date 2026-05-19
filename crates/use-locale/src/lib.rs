@@ -8,6 +8,7 @@ pub use use_locale_tag;
 pub use use_region;
 pub use use_script;
 pub use use_time_zone_id;
+pub use use_timezone;
 
 pub mod prelude;
 
@@ -16,7 +17,7 @@ mod tests {
     use super::prelude::{
         best_locale_match, fallback_chain, normalize_locale_tag, parse_currency_code,
         parse_language_code, parse_locale_tag, parse_region_code, parse_script_code,
-        parse_time_zone_id,
+        parse_time_zone, parse_time_zone_id,
     };
 
     #[test]
@@ -28,6 +29,10 @@ mod tests {
         assert_eq!(
             parse_time_zone_id("America/New_York").unwrap().area(),
             "America"
+        );
+        assert_eq!(
+            parse_time_zone("UTC+05:30").unwrap().to_string(),
+            "UTC+05:30"
         );
         assert_eq!(
             parse_locale_tag("zh-hant-tw").unwrap().as_str(),

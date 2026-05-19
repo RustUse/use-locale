@@ -31,6 +31,11 @@ release = true
 version_group = "rustuse-locale"
 
 [[package]]
+name = "use-timezone"
+release = true
+version_group = "rustuse-locale"
+
+[[package]]
 name = "use-locale-tag"
 release = true
 version_group = "rustuse-locale"
@@ -52,6 +57,7 @@ changelog_include = [
   "use-region",
   "use-currency-code",
   "use-time-zone-id",
+  "use-timezone",
   "use-locale-tag",
   "use-locale-match",
 ]

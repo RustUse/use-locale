@@ -21,6 +21,7 @@ dependencies = [
  "use-region",
  "use-script",
  "use-time-zone-id",
+ "use-timezone",
 ]
 
 [[package]]
@@ -50,3 +51,10 @@ version = "0.1.0"
 [[package]]
 name = "use-time-zone-id"
 version = "0.1.0"
+
+[[package]]
+name = "use-timezone"
+version = "0.1.0"
+dependencies = [
+ "use-time-zone-id",
+]

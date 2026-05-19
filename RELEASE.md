@@ -4,16 +4,17 @@ RustUse/use-locale is not published yet. The root workspace metadata keeps `publ
 
 For the exact same-repository reset and first publish sequence, use `docs/history-reset-and-republish.md`.
 
-Because `use-locale-tag`, `use-locale-match`, and `use-locale` depend on sibling crates, some dry-run paths are intentionally staged around crates.io index propagation.
+Because `use-timezone`, `use-locale-tag`, `use-locale-match`, and `use-locale` depend on sibling crates, some dry-run paths are intentionally staged around crates.io index propagation.
 
 ## First Publish Wave
 
 Publish in this order:
 
 1. Independent focused crates: `use-language`, `use-script`, `use-region`, `use-currency-code`, `use-time-zone-id`.
-2. Dependent focused crate: `use-locale-tag` after `use-language`, `use-script`, and `use-region` resolve from crates.io.
-3. Dependent focused crate: `use-locale-match` after `use-locale-tag` resolves from crates.io.
-4. Facade crate: `use-locale` after all child crates resolve from crates.io.
+2. Dependent focused crate: `use-timezone` after `use-time-zone-id` resolves from crates.io.
+3. Dependent focused crate: `use-locale-tag` after `use-language`, `use-script`, and `use-region` resolve from crates.io.
+4. Dependent focused crate: `use-locale-match` after `use-locale-tag` resolves from crates.io.
+5. Facade crate: `use-locale` after all child crates resolve from crates.io.
 
 ## Publish Surface
 
@@ -36,7 +37,7 @@ The repository includes release-validation paths modeled after `use-math`:
 
 - `.github/workflows/publish-readiness.yml` runs on pull requests, pushes to `main`, and manual dispatch.
 - `make release-readiness` runs local validation, examples, no-default-features coverage, and independent focused-crate publish dry-runs.
-- `make dependent-post-publish-validation` dry-runs `use-locale-tag` and `use-locale-match` after their sibling dependencies are live on crates.io.
+- `make dependent-post-publish-validation` dry-runs `use-timezone`, `use-locale-tag`, and `use-locale-match` after their sibling dependencies are live on crates.io.
 - `.github/workflows/facade-publish-readiness.yml` is a manual post-publication check that dry-runs `use-locale` after the child crates are live on crates.io.
 - The facade workflow fails fast unless every child crate already resolves from crates.io.
 

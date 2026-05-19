@@ -1,0 +1,21 @@
+[package]
+name = "use-timezone"
+description = "Small time zone and fixed offset primitives for RustUse"
+publish = true
+authors.workspace = true
+version.workspace = true
+edition.workspace = true
+homepage.workspace = true
+license.workspace = true
+repository.workspace = true
+rust-version.workspace = true
+readme = "README.md"
+documentation = "https://docs.rs/use-timezone"
+keywords = ["timezone", "offset", "iana", "locale", "rustuse"]
+categories = ["date-and-time", "parser-implementations"]
+
+[dependencies]
+use-time-zone-id.workspace = true
+
+[lints]
+workspace = true

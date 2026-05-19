@@ -1,10 +1,10 @@
 # Releasing
 
-This repository uses a staged first-wave release flow because the facade crate and two focused crates depend on sibling crates.
+This repository uses a staged first-wave release flow because the facade crate and several focused crates depend on sibling crates.
 
 ## Current release state
 
-`use-locale` publishes independent focused crates first, then dependent focused crates, then the `use-locale` facade crate.
+`use-locale` publishes independent focused crates first, then dependent focused crates including `use-timezone`, then the `use-locale` facade crate.
 
 ## Canonical release guide
 

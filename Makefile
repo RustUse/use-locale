@@ -1,7 +1,7 @@
 .PHONY: help fmt check lint test test-minimal build doc examples audit deny sbom publish-dry-run-independent publish-dry-run-dependent publish-dry-run-focused publish-dry-run-facade release-readiness dependent-post-publish-validation facade-post-publish-validation verify
 
 INDEPENDENT_CRATES := use-language use-script use-region use-currency-code use-time-zone-id
-DEPENDENT_CRATES := use-locale-tag use-locale-match
+DEPENDENT_CRATES := use-timezone use-locale-tag use-locale-match
 FOCUSED_CRATES := $(INDEPENDENT_CRATES) $(DEPENDENT_CRATES)
 
 help:

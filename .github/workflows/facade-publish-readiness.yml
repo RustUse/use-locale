@@ -18,7 +18,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       FOCUSED_CRATES: >-
-        use-language use-script use-region use-currency-code use-time-zone-id use-locale-tag use-locale-match
+        use-language use-script use-region use-currency-code use-time-zone-id use-timezone use-locale-tag use-locale-match
     steps:
       - name: Check out repository
         uses: actions/checkout@v4

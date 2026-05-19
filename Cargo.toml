@@ -7,6 +7,7 @@ members = [
     "crates/use-region",
     "crates/use-currency-code",
     "crates/use-time-zone-id",
+    "crates/use-timezone",
     "crates/use-locale-match",
 ]
 resolver = "3"
@@ -31,6 +32,7 @@ use-locale-tag = { version = "0.1.0", path = "crates/use-locale-tag" }
 use-region = { version = "0.1.0", path = "crates/use-region" }
 use-script = { version = "0.1.0", path = "crates/use-script" }
 use-time-zone-id = { version = "0.1.0", path = "crates/use-time-zone-id" }
+use-timezone = { version = "0.1.0", path = "crates/use-timezone" }
 
 [workspace.lints.rust]
 unsafe_code = "forbid"
@@ -55,6 +57,7 @@ first-publish-candidates = [
     "use-region",
     "use-currency-code",
     "use-time-zone-id",
+    "use-timezone",
     "use-locale-tag",
     "use-locale-match",
     "use-locale",

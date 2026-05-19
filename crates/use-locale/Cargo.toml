@@ -25,6 +25,7 @@ use-locale-tag.workspace = true
 use-region.workspace = true
 use-script.workspace = true
 use-time-zone-id.workspace = true
+use-timezone.workspace = true
 
 [lints]
 workspace = true
